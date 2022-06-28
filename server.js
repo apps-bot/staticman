@@ -7,22 +7,6 @@ const ExpressBrute = require('express-brute')
 const GithubWebHook = require('express-github-webhook')
 const objectPath = require('object-path')
 
-//route.js
-const Router=express.Router()
-
- // define the about route
-    router.get('/about', function (req, res) {
-      res.send('About birds')
-    })
-
-
-
-router.get('/about',function(req,res){
-  res.sendFile(path.join(__dirname+'/about.html'));
-});
-
-
-
 const StaticmanAPI = function () {
   this.controllers = {
     connect: require('./controllers/connect'),
