@@ -2,8 +2,8 @@
 
 const pkg = require('./../package.json')
 
-app.get('/cervezas', function(req, res) {
-  res.json({ mensaje: '¡A beber cerveza!' })  
+app.get('/error', (req, res) => {
+  res.send("Custom error landing page.")
 })
 
 module.exports = (req, res) => {
