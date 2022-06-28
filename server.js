@@ -7,6 +7,11 @@ const ExpressBrute = require('express-brute')
 const GithubWebHook = require('express-github-webhook')
 const objectPath = require('object-path')
 
+// help
+app.get('/help', function(req, res) {
+    res.sendFile('public/help.html', {root: __dirname })
+});
+
 const StaticmanAPI = function () {
   this.controllers = {
     connect: require('./controllers/connect'),
