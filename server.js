@@ -8,9 +8,24 @@ const GithubWebHook = require('express-github-webhook')
 const objectPath = require('object-path')
 
 // help
+const path = require('path')
+//route.js
+const Router=express.Router()
 app.get('/help', function(req, res) {
     res.sendFile('public/help.html', {root: __dirname })
-}),
+})
+ // define the about route
+    router.get('/about', function (req, res) {
+      res.send('About birds')
+    })
+
+
+
+router.get('/about',function(req,res){
+  res.sendFile(path.join(__dirname+'/about.html'));
+});
+
+
 
 const StaticmanAPI = function () {
   this.controllers = {
