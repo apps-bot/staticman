@@ -1,8 +1,7 @@
-const express = require("express");
-const app = express();
-
-var path = require('path');
-app.use(express.static(path.join(__dirname, 'public')));
+var app = express();
+app.get('/help', function(req, res) {
+    res.sendFile('public/help.html', {root: __dirname })
+});
 
 const StaticmanAPI = require('./server')
 
