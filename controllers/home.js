@@ -1,6 +1,6 @@
 'use strict'
 
-app.use("/", express.static(__dirname + "/public"));
+app.use("/", express.static(__dirname + "/public"))
 
 const pkg = require('./../package.json')
 
