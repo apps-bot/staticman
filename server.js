@@ -7,6 +7,13 @@ const ExpressBrute = require('express-brute')
 const GithubWebHook = require('express-github-webhook')
 const objectPath = require('object-path')
 
+// add new routes
+app.set('view engine', 'pug');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use('/', require('./routes'));
+// fin routes
+
 const StaticmanAPI = function () {
   this.controllers = {
     connect: require('./controllers/connect'),
